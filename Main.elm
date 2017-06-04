@@ -369,6 +369,11 @@ viewSidebar model =
                     ]
                     [ text "New Game" ]
                 ]
+            , a
+                [ href "https://github.com/hulufei/gomoku"
+                , class "github"
+                ]
+                [ text "Github" ]
             ]
 
 
