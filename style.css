@@ -31,7 +31,6 @@ table {
 	width: 90%;
 	height: 90%;
 	border-radius: 100%;
-	cursor: pointer;
 	opacity: 0;
 }
 
@@ -39,7 +38,6 @@ table {
 .piece.white {
 	border: 1px solid #000;
 	opacity: 1;
-	cursor: default;
 }
 
 .piece.black {
@@ -50,8 +48,25 @@ table {
 	background: #fff;
 }
 
-.piece.empty:hover {
+.container:not(.game-over) .piece.empty:hover {
 	background: #fff;
 	box-shadow: 0px 0px 10px 0px #999;
 	opacity: 1;
+	cursor: pointer;
+}
+
+.sidebar .title {
+	font-weight: bold;
+}
+
+.win {
+	color: #4F8A10;
+}
+
+.lose {
+	color: #D8000C;
+}
+
+.draw {
+	color: #00529B;
 }
