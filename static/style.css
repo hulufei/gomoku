@@ -1,0 +1,72 @@
+table {
+	border-collapse: collapse;
+}
+
+.container {
+	display: flex;
+	width: 600px;
+	margin: 50px auto;
+}
+
+.board {
+	width: 500px;
+	height: 500px;
+}
+
+.cell {
+	position: relative;
+	border: 1px solid #000;
+}
+
+.cell:last-child,
+.row:last-child .cell {
+	border: none;
+}
+
+.piece {
+	content: ' ';
+	position: absolute;
+	left: -45%;
+	top: -45%;
+	width: 90%;
+	height: 90%;
+	border-radius: 100%;
+	opacity: 0;
+}
+
+.piece.black,
+.piece.white {
+	border: 1px solid #000;
+	opacity: 1;
+}
+
+.piece.black {
+	background: #000;
+}
+
+.piece.white {
+	background: #fff;
+}
+
+.container:not(.game-over) .piece.empty:hover {
+	background: #fff;
+	box-shadow: 0px 0px 10px 0px #999;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.sidebar .title {
+	font-weight: bold;
+}
+
+.win {
+	color: #4F8A10;
+}
+
+.lose {
+	color: #D8000C;
+}
+
+.draw {
+	color: #00529B;
+}
